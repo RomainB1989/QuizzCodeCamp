@@ -85,6 +85,14 @@ body{
 
     main{
         height: 800px;
+        background-image: url("./images/fond-texture-grille-cahier-bleu-transparent-hd_199726-212.jpg");
+        #blur{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: whitesmoke;
+            opacity: 0.6;
+        }
     }
 
     footer{
