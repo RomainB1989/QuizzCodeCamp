@@ -73,7 +73,21 @@ body{
             display: flex;
             align-items: center;
         }
+
+        .box-account{
+            display: none;
+        }
+
+        .box-account:active{
+            display: block;
+        }
     }
 
-    
+    main{
+        height: 800px;
+    }
+
+    footer{
+        background-color: #D2B8B8;
+    }
 }
