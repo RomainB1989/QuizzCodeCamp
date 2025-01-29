@@ -8,6 +8,7 @@ body{
     padding: 0px;
     margin: 0px;
     color: black;
+    background-image: url("./images/background.png");
 
     .link{
         text-decoration: none;
@@ -138,10 +139,6 @@ body{
         }
     }
 
-    main{
-        height: 800px;
-        background-image: url("./images/background.png");
-    }
 
     footer{
         background-color: #D2B8B8;
