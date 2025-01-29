@@ -13,27 +13,33 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="./images/logo.png" alt="Logo QuizzCodeCamp" width="160px" height="160px">
-            <h1><span class="red">Q</span>uizz<span class="green">C</span>odeCa<span class="blue">m</span>p</h1>
-        </div>
+        <a href="./index.html" target="_self" id="indexLink">
+            <div class="logo">
+                <img src="./images/logo.png" alt="Logo QuizzCodeCamp" width="160px" height="160px">
+                <h1><span class="red">Q</span>uizz<span class="green">C</span>odeCa<span class="blue">m</span>p</h1>
+            </div>
+        </a>
         <div class="search-container">
             <label for="search" class="search-label"><img src="./images/Loop-Icon.png" alt="Icon Loop" class="icon-search"></label>         
             <input type="text" placeholder="Recherchez..." class="search-input" size="40" id="search"> 
         </div>
-        <div class="account"><img src="./images/Icon Compte.png" alt="icon-account"></div>
+        <div class="account">
+            <img src="./images/Icon Compte.png" alt="Icon Compte" class="icon-account">
+            <a href="#">
+                <img src="./images/bar-chart-50.png" alt="icon-stats" width="80px" height="80px">
+            </a>    
+        </div>
         <div class="box-account">
-            <button class=""></button>
-            <button class=""></button>
+            <a href="./connexion.html" class="link">Se connecter</a>
+            <a href="./creation.html" class="link">Créer mon compte</a>
         </div>
     </header>
     <main>
-        <div id="blur">
-
-        </div>
+        
     </main>
     <footer>
-
+        <p><a href="./index.html" target="_self" class="link"><span class="red">Q</span>uizz<span class="green">C</span>odeCa<span class="blue">m</span>p</a> <span class="corporate">©</span> 2025 by TheHatefulThree.</p>
     </footer>
+    <script src="./menu.js"></script>
 </body>
 </html>

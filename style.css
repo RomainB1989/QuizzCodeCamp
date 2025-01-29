@@ -7,6 +7,19 @@
 body{
     padding: 0px;
     margin: 0px;
+    color: black;
+
+    .link{
+        text-decoration: none;
+    }
+
+    .link:visited{
+        color: inherit;
+    }
+
+    .link:active{
+        color:inherit;
+    }
 
     header{
         height: 200px;
@@ -16,24 +29,37 @@ body{
         background-color: #D2B8B8;
         background: radial-gradient(ellipse, rgba(217, 217, 217, 1) 0%, rgba(210,184,184,1) 100%);
         
-        .logo{
-            font-family: "Quiglet";
-            display: flex;
-            align-items: center;
-            h1{
-                .red{
-                    color: red;
-                }
-                
-                .green{
-                    color: green;
-                }
-
-                .blue{
-                    color:blue;
+        #indexLink{
+            text-decoration: none;
+            color: inherit;
+            .logo{
+                font-family: "Quiglet";
+                display: flex;
+                align-items: center;
+                h1{
+                    .red{
+                        color: red;
+                    }
+                    
+                    .green{
+                        color: green;
+                    }
+    
+                    .blue{
+                        color:blue;
+                    }
                 }
             }
         }
+
+        #indexLink:visited{
+            color: inherit;
+        }
+
+        #indexLink:active{
+            color:inherit;
+        }
+
 
         .search-container{
             display: flex;
@@ -71,31 +97,76 @@ body{
         .account{
             margin-right: 80px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
+
+            .icon-account{
+                cursor: pointer;
+                margin-right: 80px;
+            }
         }
 
         .box-account{
+            position: absolute;
+            right: 80px;
+            top: 240px;
+            width: 150px;
+            height: auto;
             display: none;
+            padding: 10px 20px;
+            background-color: #D2B8B8;
+            border-radius: 10px;
+            border: black solid 3px;
+            
+            .link{
+                text-decoration: none;
+                font-family: "Roboto";
+                font-size: 20px;
+                padding: 5px 0px;
+                border-top: solid 2px black;
+            }
+
+            .link:nth-child(1){
+                border-top: none;
+            }
         }
 
-        .box-account:active{
+        .box-account.active{
             display: block;
         }
     }
 
     main{
         height: 800px;
-        background-image: url("./images/fond-texture-grille-cahier-bleu-transparent-hd_199726-212.jpg");
-        #blur{
-            position: relative;
-            width: 100%;
-            height: 100%;
-            background-color: whitesmoke;
-            opacity: 0.6;
-        }
+        background-image: url("./images/background.png");
     }
 
     footer{
         background-color: #D2B8B8;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Quiglet";
+        font-size: 24px;
+        p{
+            text-align: center;
+
+            .red{
+                color: red;
+            }
+            
+            .green{
+                color: green;
+            }
+
+            .blue{
+                color:blue;
+            }
+
+            .corporate{
+                font-family: Roboto;
+            }
+        }
     }
 }
