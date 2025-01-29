@@ -109,14 +109,15 @@ body{
         .box-account{
             position: absolute;
             right: 80px;
-            top: 240px;
-            width: 150px;
+            top: 202px;
+            width: 200px;
             height: auto;
-            display: none;
             padding: 10px 20px;
             background-color: #D2B8B8;
             border-radius: 10px;
             border: black solid 3px;
+            color: black;
+            display: none;
             
             .link{
                 text-decoration: none;
@@ -132,7 +133,8 @@ body{
         }
 
         .box-account.active{
-            display: block;
+            display: flex;
+            flex-direction: column;
         }
     }
 
