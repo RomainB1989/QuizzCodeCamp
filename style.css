@@ -31,6 +31,7 @@ body{
         background: radial-gradient(ellipse, rgba(217, 217, 217, 1) 0%, rgba(210,184,184,1) 100%);
         
         #indexLink{
+            width: 30%;
             text-decoration: none;
             color: inherit;
             .logo{
@@ -38,6 +39,7 @@ body{
                 display: flex;
                 align-items: center;
                 h1{
+                    font-size: 20px;
                     .red{
                         color: red;
                     }
@@ -63,6 +65,7 @@ body{
 
 
         .search-container{
+            width: 30%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -70,6 +73,7 @@ body{
 
             
             .search-input{
+                width: 80%;
                 padding: 3px 0px;
                 margin-left: 10px;
                 height: 40px;
@@ -84,6 +88,7 @@ body{
             }
 
             .search-label{
+                width: 10%;
                 border: none;
 
                 .icon-search{
@@ -96,6 +101,7 @@ body{
         }
 
         .account{
+            width: 20%;
             margin-right: 80px;
             display: flex;
             justify-content: space-between;
@@ -139,6 +145,9 @@ body{
         }
     }
 
+    main{
+        height: 700px;
+    }
 
     footer{
         background-color: #D2B8B8;
