@@ -18,11 +18,18 @@ const apiFetch = async(url, method)=> {
     }
 }
 
+const select = document.querySelector("#select-category");
 
+let arrayQuestion =  await apiFetch('https://quizz.adrardev.fr/api/question/all', "GET");
+let listUsers = await apiFetch('https://quizz.adrardev.fr/api/users', "GET");
+let listCategories = await apiFetch('https://quizz.adrardev.fr/api/category/all', "GET");
+console.log(arrayQuestion);
+console.log(listUsers);
+console.log(listCategories);
 
-// let arrayQuestion =  await apiFetch('https://quizz.adrardev.fr/api/question/all', "GET");
-// let listUsers = await apiFetch('https://quizz.adrardev.fr/api/users', "GET");
-// let listCategories = await apiFetch('https://quizz.adrardev.fr/api/category/all', "GET");
-// console.log(arrayQuestion);
-// console.log(listUsers);
-// console.log(listCategories);
+listCategories.forEach(element => {
+   const option = document.createElement("option");
+   option.value = element.title;
+   option.innerText = element.title;
+   select.appendChild(option);
+});
