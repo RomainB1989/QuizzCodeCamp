@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuizzCodeCamp - Apprendre en s'amusant !</title>
+    <title>QuizzCodeCamp - Se connecter</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Css -->
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="connexionCompte.css">
 </head>
 <body>
     <header>
@@ -30,19 +31,30 @@
             </a>    
         </div>
         <div class="box-account">
-            <a href="./connexionCompte.html" class="link">Se connecter</a>
-            <a href="./creationCompte.html" class="link">Créer mon compte</a>
+            <a href="./connexion.html" class="link">Se connecter</a>
+            <a href="./creation.html" class="link">Créer mon compte</a>
         </div>
     </header>
     <main>
-        <select name="category" id="select-category">
-        </select>
+        <div id="containerConnexion">
+            <h3>Se connecter</h3>
+            <form action="" method="post">
+                <input type="email" id="connexionEmail" placeholder="Email" required>
+                <input type="password" id="connexionPassword" placeholder="Mot de passe" required>
+                <a href="#" class="link">J'ai oublié mon mot de passe</a>
+
+                <div id="containerConnexionButton">
+                    <button type="submit" value="envoyer" id="connexionButton">Accès à mon compte</button>
+                </div>
+                <p>Je n'ai pas de compte? <a href="#" class="link"> Je clique ici</a></p>
+            </form>
+        </div>
     </main>
     <footer>
         <p><a href="./index.html" target="_self" class="link"><span class="red">Q</span>uizz<span class="green">C</span>odeCa<span class="blue">m</span>p</a> <span class="corporate">©</span> 2025 by TheHatefulThree.</p>
     </footer>
-    <script src="./menu.js"></script>
-    <script src="./category.js" type="module"></script>
 
+    <script src="./menu.js"></script>
+    <script src="connexionCompte.js"></script>
 </body>
 </html>
