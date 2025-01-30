@@ -82,7 +82,8 @@
         }
     }
 
-    .result-quizz{
+    .resultQuizz{
+        display: block;
         font-size: 32px;
         font-family: "Roboto";
         width: 100%;

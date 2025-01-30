@@ -28,7 +28,7 @@ console.log(arrayQuestion);
 console.log(listUsers);
 console.log(listCategories);
 
-let arrayQuizz = await apiFetch("https://quizz.adrardev.fr/api/quizzs/all", {method:"GET"})
+let arrayQuizz = await apiFetch("https://quizz.adrardev.fr/api/quizzs/all", {method:"GET"});
 
 listCategories.forEach(element => {
    const option = document.createElement("option");
@@ -36,13 +36,6 @@ listCategories.forEach(element => {
    option.innerText = element.title;
    select.appendChild(option);
 });
-
-
-function startQuizz(id)
-{
-    console.log(document.location);
-    console.log(id);
-}
 
 
 
