@@ -19,33 +19,112 @@ const apiFetch = async(url, body)=> {
 }
 
 const select = document.querySelector("#select-category");
+const quizzList = document.querySelector(".quizzList");
 
-<<<<<<< HEAD
 let arrayQuestion =  await apiFetch('https://quizz.adrardev.fr/api/question/all', {method:"GET"});
 let listUsers = await apiFetch('https://quizz.adrardev.fr/api/users', {method:"GET"});
 let listCategories = await apiFetch('https://quizz.adrardev.fr/api/category/all', {method:"GET"});
-=======
-let arrayQuestion =  await apiFetch("https://quizz.adrardev.fr/api/question/all", "GET");
-let listUsers = await apiFetch("https://quizz.adrardev.fr/api/users", "GET");
-let listCategories = await apiFetch("https://quizz.adrardev.fr/api/category/all", "GET");
->>>>>>> dbc1f2dee3ae45efcdf01c4b131f8498eec71d78
-console.log(arrayQuestion);
-console.log(listUsers);
-console.log(listCategories);
 
-<<<<<<< HEAD
 
 let listQuizz = await apiFetch("https://quizz.adrardev.fr/api/quizzs/all", {method:"GET"});
-console.log(listQuizz);
-=======
-let arrayQuizz = await apiFetch("https://quizz.adrardev.fr/api/quizzs/all", "GET")
->>>>>>> dbc1f2dee3ae45efcdf01c4b131f8498eec71d78
 
 listCategories.forEach(element => {
-    console.log("test");
-    
    const option = document.createElement("option");
    option.value = element.title;
    option.innerText = element.title;
    select.appendChild(option);
 });
+
+
+function startQuizz(id)
+{
+    console.log(document.location);
+    console.log(id);
+}
+
+
+
+/**
+ * Description placeholder
+ *
+ * @param {*} element 
+ */
+function createCardQuizz(element){
+    console.log(element.id);
+    const quizzBox = document.createElement("div");
+    quizzBox.style.display = "block";
+    quizzBox.setAttribute("class", "quizz");
+    
+    const titleQuizz = document.createElement("h3");
+    titleQuizz.innerText = element.title;
+    quizzBox.appendChild(titleQuizz);
+    
+    const description = document.createElement("p");
+    description.innerText = element.description;
+    quizzBox.appendChild(description);
+    
+    const listCategory = document.createElement("ul");
+    listCategory.innerText = "Catégories :";
+    listCategory.style.marginRight = "10px";
+    element.categories.forEach(categories => {
+        const nameCategory = document.createElement("li");
+        nameCategory.innerText = categories.title;
+        listCategory.appendChild(nameCategory);
+    });
+    quizzBox.appendChild(listCategory);
+    
+    const link = document.createElement("a");
+    link.innerText = "Jouer au Quizz !";
+    
+    let url = new URL(`/quizz.html?id=${element.id}`, window.location.origin);
+    console.log(window.location.origin);
+
+    link.setAttribute("href", url);
+    link.style.textDecoration = "none";
+    quizzBox.appendChild(link);
+    
+    quizzList.appendChild(quizzBox);
+}
+
+function changeStateQuizz(quizz){
+    if(quizz.style.display == "block"){
+        quizz.style.display = "none";
+    }else{
+        quizz.style.display = "block";
+    }
+}
+
+
+
+listQuizz.forEach(element => {
+    createCardQuizz(element);
+});
+
+function checkCategory(quizz){
+    const listCategories = quizz.querySelectorAll("li");
+    let checkValid = false;
+
+    listCategories.forEach(categories => {
+        if(categories.innerText == select.value){
+            checkValid = true;
+        }
+    });
+    return checkValid;
+}
+
+//event changement catégorie
+select.addEventListener("change", function(){
+    const tableQuizz = document.querySelectorAll(".quizz");
+
+    tableQuizz.forEach(quizz => {
+        if(select.value == "Toute" || select.value == "Catégories"){
+            quizz.style.display = "block";
+        }
+        else if(checkCategory(quizz)){
+            quizz.style.display = "block";
+        } else {
+            quizz.style.display = "none";
+        }
+    });
+});
+

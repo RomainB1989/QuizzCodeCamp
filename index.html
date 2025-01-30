@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Css -->
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./index.css">
+
 </head>
 <body>
     <header>
@@ -34,15 +36,21 @@
             <a href="./creationCompte.html" class="link">Créer mon compte</a>
         </div>
     </header>
-    <main>
-        <select name="category" id="select-category">
-        </select>
+    <main id="index">
+        <h2>Liste des Quizz</h2>
+        <div class="catégorie">
+            <select name="category" id="select-category">
+                <option value="Catégories" disabled selected hidden>Catégories</option>
+                <option value="Toutes">Toutes</option>
+            </select>
+        </div>
+        <div class="quizzList">
+        </div>
     </main>
     <footer>
         <p><a href="./index.html" target="_self" class="link"><span class="red">Q</span>uizz<span class="green">C</span>odeCa<span class="blue">m</span>p</a> <span class="corporate">©</span> 2025 by TheHatefulThree.</p>
     </footer>
     <script src="./menu.js"></script>
     <script src="./category.js" type="module"></script>
-
 </body>
 </html>
