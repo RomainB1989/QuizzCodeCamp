@@ -20,26 +20,14 @@ const apiFetch = async(url, body)=> {
 
 const select = document.querySelector("#select-category");
 
-<<<<<<< HEAD
-let arrayQuestion =  await apiFetch('https://quizz.adrardev.fr/api/question/all', {method:"GET"});
-let listUsers = await apiFetch('https://quizz.adrardev.fr/api/users', {method:"GET"});
-let listCategories = await apiFetch('https://quizz.adrardev.fr/api/category/all', {method:"GET"});
-=======
-let arrayQuestion =  await apiFetch("https://quizz.adrardev.fr/api/question/all", "GET");
-let listUsers = await apiFetch("https://quizz.adrardev.fr/api/users", "GET");
-let listCategories = await apiFetch("https://quizz.adrardev.fr/api/category/all", "GET");
->>>>>>> dbc1f2dee3ae45efcdf01c4b131f8498eec71d78
+let arrayQuestion =  await apiFetch("https://quizz.adrardev.fr/api/question/all",{method:"GET"});
+let listUsers = await apiFetch("https://quizz.adrardev.fr/api/users", {method:"GET"});
+let listCategories = await apiFetch("https://quizz.adrardev.fr/api/category/all", {method:"GET"});
 console.log(arrayQuestion);
 console.log(listUsers);
 console.log(listCategories);
 
-<<<<<<< HEAD
-
-let listQuizz = await apiFetch("https://quizz.adrardev.fr/api/quizzs/all", {method:"GET"});
-console.log(listQuizz);
-=======
-let arrayQuizz = await apiFetch("https://quizz.adrardev.fr/api/quizzs/all", "GET")
->>>>>>> dbc1f2dee3ae45efcdf01c4b131f8498eec71d78
+let arrayQuizz = await apiFetch("https://quizz.adrardev.fr/api/quizzs/all", {method:"GET"})
 
 listCategories.forEach(element => {
     console.log("test");
