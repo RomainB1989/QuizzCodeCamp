@@ -9,7 +9,7 @@ const form = document.querySelector('#inscriptionForm')
 
 const regexNom = /^[A-Za-zÀ-ÿ\- ]{2,}$/;
 const regexMail = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
-const regexPassword = /[$&@!]/;
+const regexPassword = /^(?=.*[$&@!]).{7,}$/;
 
 firstName.addEventListener('keyup', ()=>{
     if(regexNom.test(firstName.value)){
