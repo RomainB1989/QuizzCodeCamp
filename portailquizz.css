@@ -47,8 +47,6 @@
   }
   
 main{
-    min-height: 60vh;
-    width: auto;
     h2{
         font-family: 'Quiglet';
         font-size: xx-large;
@@ -67,11 +65,17 @@ main{
         box-shadow: 0 0 0 3px black;
         margin-top: 2%;
     }
-    /* #containerPortail{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    } */
+    table td a{
+      display: flex;
+      justify-content: center;
+    }
+    .menuD table{
+      margin-top: 5px;
+    }
+    #containerPortail{
+      margin: auto;
+      max-width: 90%;
+    }
     td{
         border: solid black 2px;
     }
