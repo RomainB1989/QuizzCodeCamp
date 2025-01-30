@@ -21,7 +21,7 @@ table, caption, #mesStats, #monCompte{
     flex-direction: row;
     justify-content: space-evenly;
     width: 60%;
-    height: 50px;
+    height: 55px;
     
     #mesStats, #monCompte{
         border-top-left-radius: 10px;
@@ -31,9 +31,11 @@ table, caption, #mesStats, #monCompte{
     }
 #mesStats{
     border-bottom: none;
+    height: 65px;
 }
 #monCompte{
     opacity: 80%;
+    height: 65px;
 }
 }
 caption{
@@ -48,6 +50,8 @@ table{
     border-bottom-right-radius: 10px ;
     border-bottom-left-radius: 10px ;
     border-top: none;
-    
+}
+td{
+    padding: 10px;
 }
 
