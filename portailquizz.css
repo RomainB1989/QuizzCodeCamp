@@ -61,12 +61,17 @@ main{
         height: 105px;
         background-color: rgba(210,184,184,0.75);
         border-collapse: collapse;
+        border-radius: 20px;
+        border-style: hidden;
         text-align: center;
+        box-shadow: 0 0 0 3px black;
+        margin-top: 2%;
     }
-    #containerPortail{
+    /* #containerPortail{
         display: flex;
+        flex-direction: column;
         justify-content: center;
-    }
+    } */
     td{
         border: solid black 2px;
     }
