@@ -21,12 +21,23 @@ const apiFetch = async(url, body)=> {
 const select = document.querySelector("#select-category");
 const quizzList = document.querySelector(".quizzList");
 
+<<<<<<< HEAD
 let arrayQuestion =  await apiFetch('https://quizz.adrardev.fr/api/question/all', {method:"GET"});
 let listUsers = await apiFetch('https://quizz.adrardev.fr/api/users', {method:"GET"});
 let listCategories = await apiFetch('https://quizz.adrardev.fr/api/category/all', {method:"GET"});
 
 
 let listQuizz = await apiFetch("https://quizz.adrardev.fr/api/quizzs/all", {method:"GET"});
+=======
+let arrayQuestion =  await apiFetch("https://quizz.adrardev.fr/api/question/all",{method:"GET"});
+let listUsers = await apiFetch("https://quizz.adrardev.fr/api/users", {method:"GET"});
+let listCategories = await apiFetch("https://quizz.adrardev.fr/api/category/all", {method:"GET"});
+console.log(arrayQuestion);
+console.log(listUsers);
+console.log(listCategories);
+
+let arrayQuizz = await apiFetch("https://quizz.adrardev.fr/api/quizzs/all", {method:"GET"})
+>>>>>>> 43b8d90d025027e97f3659b72fbaff2521902096
 
 listCategories.forEach(element => {
    const option = document.createElement("option");
