@@ -9,7 +9,7 @@
                 <div id="containerConnexionButton">
                     <button type="submit" value="envoyer" id="connexionButton">Accès à mon compte</button>
                 </div>
-                <p>Je n'ai pas de compte? <a href="#"> Je clique ici</a></p>
+                <p>Je n'ai pas de compte? <a href="./controllerCreationCompte.php"> Je clique ici</a></p>
             </form>
         </div>
 </main>
