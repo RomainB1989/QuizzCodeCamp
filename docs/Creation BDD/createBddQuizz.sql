@@ -9,9 +9,9 @@ CREATE TABLE IF NOT EXISTS users(
    id_user INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
    firstname_user VARCHAR(50) NOT NULL,
    lastname_user VARCHAR(50) NOT NULL,
-   email_user VARCHAR(50) NOT NULL,
+   email_user VARCHAR(50) NOT NULL UNIQUE,
    password_user VARCHAR(255) NOT NULL,
-   avatar_user VARCHAR(255) NOT NULL,
+   avatar_user VARCHAR(255),
    id_role INT NOT NULL,
    CONSTRAINT fk_users_role FOREIGN KEY(id_role) REFERENCES Role(id_role) ON DELETE CASCADE
 );
@@ -91,5 +91,5 @@ CREATE TABLE IF NOT EXISTS respond_to(
    CONSTRAINT fk_respond_first FOREIGN KEY(id_first) REFERENCES commentary(id_commentary)  ON DELETE CASCADE
 );
 
-
+INSERT INTO `role` (name_role) VALUES ("utilisateur"), ("administrateur");
 
