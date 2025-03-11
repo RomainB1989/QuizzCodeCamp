@@ -1,3 +1,32 @@
+//Search bar
+const searchBar = document.querySelector('.search-input');
+
+searchBar.addEventListener("input", searchFilter);
+
+
+function searchFilter() {
+    const cards = document.querySelectorAll('.quizz');
+
+    if (searchBar.value != "") {
+        for (let card of cards) {
+            let title = card.querySelector('.titleQ').textContent.toLocaleLowerCase();
+            let filterValue = searchBar.value.toLocaleLowerCase();
+            if(!title.includes(filterValue)){
+                card.style.display = "none";
+            } else {
+                card.style.display = "block";
+            }
+        }
+    } else {
+        for (let card of cards) {
+            card.style.display = "block";
+        }
+    }
+}
+searchFilter();
+
+
+
 const apiFetch = async(url, body)=> { 
     try{
         const rawData = await fetch(url, body);
