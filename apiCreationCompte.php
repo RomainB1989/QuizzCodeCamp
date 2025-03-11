@@ -81,7 +81,7 @@ $password = password_hash($password, PASSWORD_BCRYPT);
 
 //5) Vérifier si l'email est disponible ou pas
 //5.1) Création de l'objet de connexion
-$bdd =  DBconnect();
+$bdd = DBconnect();
 
 try{
     //5.2) Préparation de la requête SELECT

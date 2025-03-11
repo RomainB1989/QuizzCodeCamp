@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuizzCodeCamp - Création de compte</title>
+    <title>QuizzCodeCamp - Se connecter</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Css -->
-    
-    <link rel="stylesheet" href="./source/css/creationCompte.css">
+    <link rel="stylesheet" href="./source/css/connexionCompte.css">
     <link rel="stylesheet" href="./source/css/style.css">
-
+    
 </head>
 <body>
     <header>
@@ -34,37 +33,30 @@
         </div>
         <div class="box-account">
             <a href="./connexionCompte.html" class="link">Se connecter</a>
-            <a href="./creationCompte.php" class="link">Créer mon compte</a>
+            <a href="./creationCompte.html" class="link">Créer mon compte</a>
         </div>
     </header>
     <main>
-        <div id="containerInscription">
-            <h3>Créer mon compte</h3>
-
-            <form action="" method="post" id="inscriptionForm">
-                <input type="text" id="firstName" name="firstname_user" minlength="2" placeholder="Prénom" required>
-                <input type="text" id="lastName" name="lastname_user" minlength="2" placeholder="Nom" required>
-                <input type="email" id="inscriptionEmail" name="email_user" placeholder="Email" required>
-                <p id="messageMail"></p>
-                <input type="password" id="inscriptionPassword" name="mdp_user" minlength="8" placeholder="Mot de passe" required>
-                <p id="messagePassword"></p>
-                <label for="photoInscription" class="custom-file">Choisissez votre avatar</label>
-                <input type="file" id="photoInscription" accept=".png, .jpg, .gif" name="photo">
-                <div id="previewContainer">
-                    <img src="" alt="Votre photo" id="previewPhoto">
-                </div>
+        <div id="containerConnexion">
+            <h3>Se connecter</h3>
+            <form action="" method="post" id="connexionForm">
+                <input type="email" id="connexionEmail" name="email_user" placeholder="Email" required>
+                <input type="password" id="connexionPassword" name="mdp_user" placeholder="Mot de passe" required>
+                <a href="#">J'ai oublié mon mot de passe</a>
                 <p id="messageApi"></p>
-                <div id="containerInscriptionButton">
-                    <button type="submit" value="valider" id="inscriptionButton" name="submitSubscribe">Valider le compte</button>
+                <div id="containerConnexionButton">
+                    <button type="submit" value="envoyer" id="connexionButton" name="submitConnexion">Accès à mon compte</button>
                 </div>
+                <p>Je n'ai pas de compte? <a href="#"> Je clique ici</a></p>
             </form>
         </div>
     </main>
     <footer>
         <p><a href="./index.html" target="_self" class="link"><span class="red">Q</span>uizz<span class="green">C</span>odeCa<span class="blue">m</span>p</a> <span class="corporate">©</span> 2025 by TheHatefulThree.</p>
     </footer>
+
     <script src="./source/js/menu.js"></script>
-    <script src="./source/js/creationCompte.js"></script>
+    <script src="./source/js/connexionCompte.js"></script>
     <script src="./source/js/apiConnect.js"></script>
 </body>
 </html>
