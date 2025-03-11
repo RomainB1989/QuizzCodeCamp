@@ -24,9 +24,9 @@ const quizzList = document.querySelector(".quizzList");
 let arrayQuestion =  await apiFetch("https://quizz.adrardev.fr/api/question/all",{method:"GET"});
 let listUsers = await apiFetch("https://quizz.adrardev.fr/api/users", {method:"GET"});
 let listCategories = await apiFetch("https://quizz.adrardev.fr/api/category/all", {method:"GET"});
-console.log(arrayQuestion);
-console.log(listUsers);
-console.log(listCategories);
+// console.log(arrayQuestion);
+// console.log(listUsers);
+// console.log(listCategories);
 
 let arrayQuizz = await apiFetch("https://quizz.adrardev.fr/api/quizzs/all", {method:"GET"});
 
@@ -45,7 +45,7 @@ listCategories.forEach(element => {
  * @param {*} element 
  */
 function createCardQuizz(element){
-    console.log(element.id);
+    //console.log(element.id);
     const quizzBox = document.createElement("div");
     quizzBox.style.display = "block";
     quizzBox.setAttribute("class", "quizz");
@@ -71,8 +71,8 @@ function createCardQuizz(element){
     const link = document.createElement("a");
     link.innerText = "Jouer au Quizz !";
     
-    let url = new URL(`/quizz.html?id=${element.id}`, window.location.origin);
-    console.log(window.location.origin);
+    let url = new URL(`adrar/QuizzCodeCamp/controllerQuizz.php?id=${element.id}`, window.location.origin);
+    //console.log(window.location.origin);
 
     link.setAttribute("href", url);
     link.style.textDecoration = "none";

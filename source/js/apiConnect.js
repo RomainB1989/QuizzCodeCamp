@@ -28,7 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
           //console.log('Compte créé avec succès:', result);
           messageApi.style.color = 'green';
           messageApi.innerText = result["message"];
-          window.location.href="./controllerCompteUtilisateurStat.php";
+          if(result["id_role"] == 1){
+              window.location.href="./controllerCompteUtilisateurStat.php";
+          } else {
+            window.location.href="./controllerAdmin.php";
+          }
           // Ajoutez ici le code pour gérer la réussite (ex: redirection, message de succès)
         } else {
           //console.log(result);
