@@ -10,15 +10,15 @@ body{
     color: black;
     background-image: url("../images/background.png");
 
-    .link{
+    .link, .linkCo{
         text-decoration: none;
     }
 
-    .link:visited{
+    .link:visited, .linkCo:visited{
         color: inherit;
     }
 
-    .link:active{
+    .link:active, .linkCo:active{
         color:inherit;
     }
 
@@ -126,7 +126,7 @@ body{
             color: black;
             display: none;
             
-            .link{
+            .link, .linkCo{
                 text-decoration: none;
                 font-family: "Roboto";
                 font-size: 20px;
@@ -134,7 +134,7 @@ body{
                 border-top: solid 2px black;
             }
 
-            .link:nth-child(1){
+            .link:nth-child(2), .linkCo:nth-child(1){
                 border-top: none;
             }
         }

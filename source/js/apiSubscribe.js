@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
     formData.forEach((value, key) => {
       userData[key] = value;
     });
-  //console.log(JSON.stringify(userData));
+  console.log(JSON.stringify(userData));
     try {
-      const response = await fetch('http://localhost/adrar/QuizzCodeCamp/apiCreationCompte.php', {
+      const response = await fetch('https://localhost/Projetquizz/apiCreationCompte.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

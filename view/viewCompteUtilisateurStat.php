@@ -1,5 +1,5 @@
 <main>
-        <h3>Bonjour Pseudo</h3>
+    <h3>Bonjour <?= $_SESSION["firstname_user"]?> <?= $_SESSION["lastname_user"] ?> </h3>
         <div id="onglet">
             <div id="mesStats">
                     <p>Mes statistiques</p>
