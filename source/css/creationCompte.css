@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'Quiglet';
-    src: url("./fonts/quiglet\ free.otf");
+    src: url("./fonts/quigletfree.otf");
 }
 
 body{
@@ -242,7 +242,6 @@ input[type="file"]{ /*J'enlève le texte "aucun fichier sélectionné"*/
 }
 
 
-
 #previewContainer{
     margin-top: 10px;
     text-align: center;
@@ -262,6 +261,11 @@ input[type="file"]{ /*J'enlève le texte "aucun fichier sélectionné"*/
 }
 #previewPhoto:hover{
     transform: scale(1.1);
+}
+
+#messageApi{
+    padding: 10px, 10px;
+    font-weight: bold;
 }
 
 
