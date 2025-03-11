@@ -26,6 +26,7 @@ if(isset($_POST["envoyer"])){
                         $_SESSION['lastname_user'] = $data[0]['lastname_user'];
                         $_SESSION['firstname_user'] = $data[0]['firstname_user'];
                         $_SESSION['email_user'] = $data[0]['email_user'];
+                        $_SESSION['id_role'] = $data[0]['id_role'];
                         
                         $message = "Connexion réussie";
                         header('Location:controllerCompteUtilisateurStat.php');
