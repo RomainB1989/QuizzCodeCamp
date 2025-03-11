@@ -1,14 +1,16 @@
 <?php
-    if (isset($_SESSION["id_user"])) {
-        echo "<style>.link {
-            display: none;
-        }</style>";
+
+
+    // if (isset($_SESSION["id_user"])) {
+    //     echo "<style>.link {
+    //         display: none;
+    //     }</style>";
         
-    }else{
-        echo "<style>.linkCo {
-            display: none;
-        }</style>";
-    }
+    // }else{
+    //     echo "<style>.linkCo {
+    //         display: none;
+    //     }</style>";
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +31,7 @@
 </head>
 <body>
     <header>
-        <a href="./index.html" target="_self" id="indexLink">
+        <a href="./index.php" target="_self" id="indexLink">
             <div class="logo">
                 <img src="./source/images/logo.png" alt="Logo QuizzCodeCamp" width="160px" height="160px">
                 <h1><span class="red">Q</span>uizz<span class="green">C</span>odeCa<span class="blue">m</span>p</h1>
@@ -46,10 +48,10 @@
             </a>    
         </div>
         <div class="box-account">
-            <a href="deco.php" class="linkCo">Se déconnecter</a>
-            <a href="./controllerConnexionCompte.php" class="link">Se connecter</a>
+            <a href="./connexionCompte.php" class="link">Se connecter</a>
+            <a href="./creationCompte.php" class="link">Créer mon compte</a>
             <a href="./controllerCompteUtilisateurStat.php" class="linkCo">Mon compte</a>
-            <a href="creationCompte.php" class="link">Créer mon compte</a>
+            <a href="./deco.php" class="linkCo">Se déconnecter</a>
         </div>
     </header>
     <main>

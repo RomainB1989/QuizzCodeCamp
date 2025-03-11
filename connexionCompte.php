@@ -1,3 +1,15 @@
+<?php
+    // if (isset($_SESSION["id_user"])) {
+    //     echo "<style>.link {
+    //         display: none;
+    //     }</style>";
+        
+    // }else{
+    //     echo "<style>.linkCo {
+    //         display: none;
+    //     }</style>";
+    // }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,7 +27,7 @@
 </head>
 <body>
     <header>
-        <a href="./index.html" target="_self" id="indexLink">
+        <a href="./index.php" target="_self" id="indexLink">
             <div class="logo">
                 <img src="./source/images/logo.png" alt="Logo QuizzCodeCamp" width="160px" height="160px">
                 <h1><span class="red">Q</span>uizz<span class="green">C</span>odeCa<span class="blue">m</span>p</h1>
@@ -32,8 +44,10 @@
             </a>    
         </div>
         <div class="box-account">
-            <a href="./connexionCompte.html" class="link">Se connecter</a>
-            <a href="./creationCompte.html" class="link">Créer mon compte</a>
+            <a href="./connexionCompte.php" class="link">Se connecter</a>
+            <a href="./creationCompte.php" class="link">Créer mon compte</a>
+            <a href="./controllerCompteUtilisateurStat.php" class="linkCo">Mon compte</a>
+            <a href="deco.php" class="linkCo">Se déconnecter</a>
         </div>
     </header>
     <main>
@@ -47,7 +61,7 @@
                 <div id="containerConnexionButton">
                     <button type="submit" value="envoyer" id="connexionButton" name="submitConnexion">Accès à mon compte</button>
                 </div>
-                <p>Je n'ai pas de compte? <a href="#"> Je clique ici</a></p>
+                <p>Je n'ai pas de compte? <a href="./creationCompte.php"> Je clique ici</a></p>
             </form>
         </div>
     </main>

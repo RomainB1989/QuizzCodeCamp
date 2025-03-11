@@ -107,13 +107,13 @@ try{
 
             }else{
                 http_response_code(409);
-                echo json_encode(["message" => "Login et/ou Mot de Passe incorrect(s)", "code" => 409]);
+                echo json_encode(["message" => "Login et/ou Mot de Passe incorrect(s) !", "code" => 409]);
                 return;
             }
 
         }else{
             http_response_code(409);
-            echo json_encode(["message" => "Utilisateur n'existe pas !", "code" => 409]);
+            echo json_encode(["message" => "Login et/ou Mot de Passe incorrect(s) !", "code" => 409]);
             return;
         }
 
