@@ -82,7 +82,8 @@ function createCardQuizz(element){
     const titleQuizz = document.createElement("h3");
     titleQuizz.innerText = element.title;
     quizzBox.appendChild(titleQuizz);
-    
+    titleQuizz.setAttribute("class", "titleQ");
+
     const description = document.createElement("p");
     description.innerText = element.description;
     quizzBox.appendChild(description);
