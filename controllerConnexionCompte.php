@@ -29,7 +29,12 @@ if(isset($_POST["envoyer"])){
                         $_SESSION['id_role'] = $data[0]['id_role'];
                         
                         $message = "Connexion réussie";
-                        header('Location:controllerCompteUtilisateurStat.php');
+                        
+                        if($data[0]['id_role'] == 2){
+                            header('Location:controllerAdmin.php');
+                        }else{
+                            header('Location:controllerCompteUtilisateurStat.php');
+                        }
 
                     }else{
                         $message = "Mot de passe non valide";

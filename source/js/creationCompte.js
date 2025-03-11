@@ -40,7 +40,7 @@ email.addEventListener('keyup', ()=>{
 
 password.addEventListener('keyup', () =>{
 
-    if(regexPassword.test(password.value)){
+    if(regexPasswordCreation.test(password.value)){
         password.style.border = 'solid 3px green'
         messagePassword.style.display = 'none'
     }else{
@@ -52,10 +52,10 @@ password.addEventListener('keyup', () =>{
 
 form.addEventListener('submit', (e) =>{
     if(
-        !regexNom.test(firstName.value) ||
-        !regexNom.test(lastName.value) ||
-        !regexMail.test(email.value) ||
-        !regexPassword.test(password.value)
+        !regexNomCreation.test(firstName.value) ||
+        !regexNomCreation.test(lastName.value) ||
+        !regexMailCreation.test(email.value) ||
+        !regexPasswordCreation.test(password.value)
     ){
         e.preventDefault();
         alert("Veuillez compléter correctement le formulaire")

@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
     formData.forEach((value, key) => {
       userData[key] = value;
     });
-  //console.log(JSON.stringify(userData));
+  console.log(JSON.stringify(userData));
     try {
-      const response = await fetch('http://localhost/adrar/QuizzCodeCamp/apiCreationCompte.php', {
+      const response = await fetch('https://localhost/Projetquizz/apiCreationCompte.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -60,31 +60,31 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Validation de l'email
-  const emailInput = document.getElementById('inscriptionEmail');
-  const messageMail = document.getElementById('messageMail');
+  // const emailInput = document.getElementById('inscriptionEmail');
+  // const messageMail = document.getElementById('messageMail');
 
-  emailInput.addEventListener('input', () => {
-    if (emailInput.validity.valid) {
-      messageMail.textContent = 'Email valide';
-      messageMail.style.color = 'green';
-    } else {
-      messageMail.textContent = 'Email invalide';
-      messageMail.style.color = 'red';
-    }
-  });
+  // emailInput.addEventListener('input', () => {
+  //   if (emailInput.validity.valid) {
+  //     messageMail.textContent = 'Email valide';
+  //     messageMail.style.color = 'green';
+  //   } else {
+  //     messageMail.textContent = 'Email invalide';
+  //     messageMail.style.color = 'red';
+  //   }
+  // });
 
-  // Validation du mot de passe
-  const passwordInput = document.getElementById('inscriptionPassword');
-  const messagePassword = document.getElementById('messagePassword');
+  // // Validation du mot de passe
+  // const passwordInput = document.getElementById('inscriptionPassword');
+  // const messagePassword = document.getElementById('messagePassword');
 
-  passwordInput.addEventListener('input', () => {
-    if (passwordInput.validity.valid) {
-      messagePassword.textContent = 'Mot de passe valide';
-      messagePassword.style.color = 'green';
-    } else {
-      messagePassword.textContent =
-        'Le mot de passe doit contenir au moins 10 caractères dont un caractère spécial.';
-      messagePassword.style.color = 'red';
-    }
-  });
+  // passwordInput.addEventListener('input', () => {
+  //   if (passwordInput.validity.valid) {
+  //     messagePassword.textContent = 'Mot de passe valide';
+  //     messagePassword.style.color = 'green';
+  //   } else {
+  //     messagePassword.textContent =
+  //       'Le mot de passe doit contenir au moins 10 caractères dont un caractère spécial.';
+  //     messagePassword.style.color = 'red';
+  //   }
+  // });
 });

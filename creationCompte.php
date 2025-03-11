@@ -1,3 +1,16 @@
+<?php
+    if (isset($_SESSION["id_user"])) {
+        echo "<style>.link {
+            display: none;
+        }</style>";
+        
+    }else{
+        echo "<style>.linkCo {
+            display: none;
+        }</style>";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,8 +21,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <!-- Css -->
-    
     <link rel="stylesheet" href="./source/css/creationCompte.css">
     <link rel="stylesheet" href="./source/css/style.css">
 
@@ -33,8 +46,10 @@
             </a>    
         </div>
         <div class="box-account">
-            <a href="./connexionCompte.html" class="link">Se connecter</a>
-            <a href="./creationCompte.php" class="link">Créer mon compte</a>
+            <a href="deco.php" class="linkCo">Se déconnecter</a>
+            <a href="./controllerConnexionCompte.php" class="link">Se connecter</a>
+            <a href="./controllerCompteUtilisateurStat.php" class="linkCo">Mon compte</a>
+            <a href="creationCompte.php" class="link">Créer mon compte</a>
         </div>
     </header>
     <main>
