@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       formData.forEach((value, key) => {
         userData[key] = value;
       });
-    /console.log(JSON.stringify(userData));
+    //console.log(JSON.stringify(userData));
       try {
         const response = await fetch('http://localhost/adrar/QuizzCodeCamp/apiConnexionCompte.php', {
           method: 'POST',
