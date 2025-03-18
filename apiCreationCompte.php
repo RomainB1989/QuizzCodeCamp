@@ -1,4 +1,3 @@
-
 <?php
 include "./utils/functions.php";
 include "./model/model_user.php";

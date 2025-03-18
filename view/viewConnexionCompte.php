@@ -1,7 +1,7 @@
 <main>
         <div id="containerConnexion">
             <h3>Se connecter</h3>
-            <form action="" method="post">
+            <form action="" method="post" id="connexionForm">
                 <input type="email"  name="email" id="connexionEmail" placeholder="Email" required>
                 <input type="password" name="password" id="connexionPassword" placeholder="Mot de passe" required>
                 <a href="#">J'ai oublié mon mot de passe</a>

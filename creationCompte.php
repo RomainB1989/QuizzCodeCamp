@@ -82,6 +82,6 @@
     </footer>
     <script src="./source/js/menu.js"></script>
     <script src="./source/js/creationCompte.js"></script>
-    <script src="./source/js/apiConnect.js"></script>
+    <script src="./source/js/apiSubscribe.js"></script>
 </body>
 </html>
