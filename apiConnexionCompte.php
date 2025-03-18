@@ -99,7 +99,7 @@ try{
 
                 //7) Envoie le message de confirmation
                 http_response_code(200);
-                echo json_encode(['message' => 'Connexion effectué avec Succès !', 'code' => 200, 'id_role' => 1]);
+                echo json_encode(['message' => 'Connexion effectué avec Succès !', 'code' => 200, 'id_role' => $data[0]['id_role']]);
 
                 //Arrêt du script
                 return;
