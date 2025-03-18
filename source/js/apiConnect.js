@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           // Ajoutez ici le code pour gérer la réussite (ex: redirection, message de succès)
         } else {
+          const result = await response.json();
           //console.log(result);
           messageApi.style.color = 'red';
           messageApi.innerText = result["message"];
@@ -43,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (error) {
         //console.error('Erreur:', error);
         messageApi.style.color = 'red';
-        messageApi.innerText = 'Erreur Api', error["message"];
+        messageApi.innerText = 'Erreur Api : '+error.message;
         // Gérez les erreurs de réseau ou autres ici
       }
     });

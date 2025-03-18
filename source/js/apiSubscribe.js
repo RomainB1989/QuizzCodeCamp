@@ -46,16 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
         messageApi.innerText = result["message"];
         // Ajoutez ici le code pour gérer la réussite (ex: redirection, message de succès)
       } else {
-        //console.log(result);
+        const result = await response.json(); // Récupérer le message d'erreur
         messageApi.style.color = 'red';
-        messageApi.innerText = result["message"];
+        messageApi.innerText = result["message"]; // Afficher le message d'erreur directement
         // Ajoutez ici le code pour gérer l'échec
       }
     } catch (error) {
-      //console.error('Erreur:', error);
       messageApi.style.color = 'red';
-      messageApi.innerText = 'Erreur Api', error["message"];
-      // Gérez les erreurs de réseau ou autres ici
+      messageApi.innerText = 'Erreur Api: ' + error.message; // Afficher le message d'erreur de l'exception
     }
   });
 });
