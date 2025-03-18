@@ -17,6 +17,27 @@ if(isset($_POST["inscriptionButton"])){
                 $email = nettoyage($_POST["email_user"]);
                 $mdp = nettoyage($_POST["mdp_user"]);
                 $avatar = "";
+
+                // if(isset($_FILES['photoInscription']) &&$_FILES['avatar']['error'] == 0){
+                //     $allowed_types = ['image/jpeg', 'image/png'];
+                //     $fileType = mime_content_type($_FILES['avatar']['tmp_name']);
+                //     if(in_array($fileType, $allowed_types)){
+                //         $upload_dir = './source/images/avatars/';
+                //         if(!is_dir($upload_dir)){
+                //             mkdir($upload_dir, 0777, true);
+                //         }
+                //         $avatar_name = basename($_FILES['avatar']['name']);
+                //         $avatar_path = $upload_dir . $avatar_name;
+
+                //         if(move_uploaded_file($_FILES['avatar']['tmp_name'], $avatar_path)){
+                //             $avatar = $avatar_path;
+                //         }else{
+                //             $message = "Erreur lors de l'upload de l'avatar";
+                //         }
+                //     } else{
+                //         $message = "Type de fichier non autorisé";
+                // }
+            
                 //chiffrage mdp
                 $mdp = password_hash($mdp, PASSWORD_BCRYPT);
 

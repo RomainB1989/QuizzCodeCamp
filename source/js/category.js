@@ -79,7 +79,7 @@ function createCardQuizz(element){
     quizzBox.style.display = "block";
     quizzBox.setAttribute("class", "quizz");
     
-    const titleQuizz = document.createElement("h3");
+    const titleQuizz = document.createElement("h1");
     titleQuizz.innerText = element.title;
     quizzBox.appendChild(titleQuizz);
     titleQuizz.setAttribute("class", "titleQ");
@@ -90,7 +90,7 @@ function createCardQuizz(element){
     
     const listCategory = document.createElement("ul");
     listCategory.innerText = "Catégories :";
-    listCategory.style.marginRight = "10px";
+    //listCategory.style.marginRight = "10px";
     element.categories.forEach(categories => {
         const nameCategory = document.createElement("li");
         nameCategory.innerText = categories.title;

@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   console.log(JSON.stringify(userData));
     try {
-      const response = await fetch('https://localhost/Projetquizz/apiCreationCompte.php', {
+      const response = await fetch('https://localhost/quizz/apiCreationCompte.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
