@@ -5,7 +5,7 @@ function nettoyage($data){
 };
 
 // function DBconnect(){
-//     $bdd = new PDO("mysql:host=localhost;dbname=quizz", "root", "", array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+//     $bdd = new PDO("mysql:host=localhost;dbname=quizz; charset=utf8mb4",  "root", "", array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 //     return $bdd;
 // }
 
@@ -31,7 +31,7 @@ function DBconnect(): PDO{
     }
 
     $conn = new PDO(
-        "mysql:host={$_ENV['DB_HOST']};dbname={$_ENV['DB_NAME']}", 
+        "mysql:host={$_ENV['DB_HOST']};dbname={$_ENV['DB_NAME']};charset=utf8mb4", 
         $_ENV['DB_USER'], 
         $_ENV['DB_PASSWORD'], 
         array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
