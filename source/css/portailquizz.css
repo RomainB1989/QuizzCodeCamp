@@ -124,3 +124,49 @@ main{
     background-color: #fcebeb;
     }
 }
+
+label{
+  text-align: center;
+  font-weight: bolder;
+  padding: 1%;
+  
+  
+}
+
+.custom-file{
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #610909a2;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 4px 4px 4px rgb(0, 0, 0, 40%);
+  transition: transform 0.3s ease;
+}
+.custom-file:hover{
+  transform: scale(1.1);
+  background-color:#219ED3;
+}
+input[type="file"]{ /*J'enlève le texte "aucun fichier sélectionné"*/
+  display: none;
+}
+
+#previewContainer{
+margin-top: 10px;
+text-align: center;
+display: flex;
+justify-content: center;
+
+}
+#previewPhoto{
+object-fit: cover;
+border-radius: 10%;
+display: none;
+max-width: 200px;
+max-height: 200px;
+transition: transform 0.3s ease;
+}
+#previewPhoto:hover{
+transform: scale(1.1);
+}

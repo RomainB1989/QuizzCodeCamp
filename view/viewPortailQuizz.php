@@ -19,31 +19,51 @@
             <form class="menuD" method="post" action="">
                 <table>
                     <tr>
-                        <td colspan="4"> <input type="text" placeholder="Question"> </td>
+                        <td colspan="4"> 
+                            <input type="text" name="titre" placeholder="Titre du quizz">
                     </tr>
                     <tr>
-                        <td><input type="text" placeholder="Réponse"></td>
-                        <td><input type="text" placeholder="Réponse"></td>
-                        <td><input type="text" placeholder="Réponse"></td>
-                        <td><input type="text" placeholder="Réponse"></td>
+                        <td colspan="4">
+                            <label for="photoQuizz" class="custom-file">Photo du quizz</label>
+                            <input type="file" id="photoQuizz" accept=".png, .jpg" name="image">
+                            <div id="previewContainer">
+                                <img src="" alt="Votre photo" id="previewPhoto">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        
+                        <td colspan="4">
+                        <label for="description">Description du quizz</label><textarea name="description" id="description"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><input type="text" name="question[]" placeholder="Question"></td>
+                    </tr>
+
+                        <td><input type="text" name="reponse[]" placeholder="Réponse"></td>
+                        <td><input type="text" name="reponse[]" placeholder="Réponse"></td>
+                        <td><input type="text" name="reponse[]" placeholder="Réponse"></td>
+                        <td><input type="text" name="reponse[]" placeholder="Réponse"></td>
+                        <p><?php echo $message ?></p>
+                        <td><button type="submit" name="quizzSubmit" value="envoyer">Valider le quizz</button></td>
                     </tr>
                     <tr>
                         <td colspan="4"><input type="text" placeholder="Question"></td>
                     </tr>
                     <tr>
-                        <td><input type="text" placeholder="Réponse"></td>
-                        <td><input type="text" placeholder="Réponse"></td>
-                        <td><input type="text" placeholder="Réponse"></td>
-                        <td><input type="text" placeholder="Réponse"></td>
+                        <td><input type="text"name="reponse[]" placeholder="reponse"></td>
+                        <td><input type="text"name="reponse[]" placeholder="reponse"></td>
+                        <td><input type="text"name="reponse[]" placeholder="reponse"></td>
+                        <td><input type="text"name="reponse[]" placeholder="reponse"></td>
                     </tr>
                     <tr>
                         <td colspan="4"><input type="text" placeholder="Question"></td>
                     </tr>
-                    <tr>
-                        <td><input type="text" placeholder="Réponse"></td>
-                        <td><input type="text" placeholder="Réponse"></td>
-                        <td><input type="text" placeholder="Réponse"></td>
-                        <td><input type="text" placeholder="Réponse"></td>
+                    <tr>                        
+                        <td><input type="text"name="reponse[]" placeholder="reponse"></td>
+                        <td><input type="text"name="reponse[]" placeholder="reponse"></td>
+                        <td><input type="text"name="reponse[]" placeholder="reponse"></td>
+                        <td><input type="text"name="reponse[]" placeholder="reponse"></td>
                     </tr>
                 </table>
             </form>

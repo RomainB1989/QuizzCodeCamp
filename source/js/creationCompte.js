@@ -11,24 +11,22 @@ const regexNomCreation = /^[A-Za-zÀ-ÿ\- ]{2,}$/;
 const regexMailCreation = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
 const regexPasswordCreation = /^(?=.*[$&@!]).{7,}$/;
 
-firstName.addEventListener('keyup', ()=>{
+firstName.addEventListener('keyup', ()=>{ //pour le prénom
     if(regexNomCreation.test(firstName.value)){
         firstName.style.border = 'solid 3px green'
     }else{
         firstName.style.border = 'solid 3px red'
     }
 })
-lastName.addEventListener('keyup', ()=>{
+lastName.addEventListener('keyup', ()=>{ //pour le nom
     if(regexNomCreation.test(lastName.value)){
         lastName.style.border = 'solid 3px green'
     }else{
         lastName.style.border = 'solid 3px red'
     }
 })
-
 email.addEventListener('keyup', ()=>{
-    
-    if(regexMailCreation.test(email.value)){
+    if(regexMailCreation.test(email.value)){ //pour l'email
         email.style.border = 'solid 3px green'
         messageMail.style.display = 'none'
     } else{
@@ -37,10 +35,8 @@ email.addEventListener('keyup', ()=>{
         messageMail.style.color = 'red'
     }
 })
-
 password.addEventListener('keyup', () =>{
-
-    if(regexPasswordCreation.test(password.value)){
+    if(regexPasswordCreation.test(password.value)){ //pour le mot de passe
         password.style.border = 'solid 3px green'
         messagePassword.style.display = 'none'
     }else{
@@ -49,7 +45,6 @@ password.addEventListener('keyup', () =>{
         messagePassword.style.color = 'red'
     }
 })
-
 form.addEventListener('submit', (e) =>{
     if(
         !regexNomCreation.test(firstName.value) ||
@@ -61,6 +56,9 @@ form.addEventListener('submit', (e) =>{
         alert("Veuillez compléter correctement le formulaire")
     }
 })
+
+
+
 
 //Prévisualisation de la photo
 

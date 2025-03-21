@@ -65,4 +65,24 @@ catch(Exception $error) {
 }
 }
 
+
+
+//!Fonction qui ajoute des questions
+function addQuestion($bdd, $titleQuestion, $descriptionQuestion, $imgQuizz){
+    try{
+        $req = $bdd->prepare("INSERT INTO quizz (title_quizz, description_quizz, img_quizz) VALUES (?,?,?)");
+
+        $req->bindParam(1, $titleQuestion, PDO::PARAM_STR);
+        $req->bindParam(2, $descriptionQuestion, PDO::PARAM_STR);
+        $req->bindParam(3, $imgQuizz, PDO::PARAM_STR);
+
+        $req->execute();
+        return "Ajout du quizz $titleQuestion réussi.";
+
+    }catch(Exception $error) {
+        return $error->getMessage();
+    }
+}
+
+
 ?>
